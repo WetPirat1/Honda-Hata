@@ -1,0 +1,622 @@
+@charset "UTF-8";
+[class*=_container] {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+* {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-headline {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 90px;
+}
+
+.open {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8); /* Задаем полупрозрачный цвет фона (измените значение alpha для управления прозрачностью) */
+  color: white; /* Цвет текста */
+  width: 100%;
+  position: fixed;
+  padding: 15px 0; /* Добавьте необходимое заполнение */
+  z-index: 99;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* Применяем размытие к элементам под header */
+  /* Style the logo */
+  /* Style the navigation menu */
+  /* Center the menu items vertically */
+  /* Add hover effect for menu items (optional) */
+  /* Добавляем класс active для анимации иконки бургера */
+  /* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+}
+header .open {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+header .header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* Logo on the left and nav on the right */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Vertically center the items */
+  /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the header on the page */
+  padding: 0 20px; /* Add horizontal padding as needed */
+}
+header .logo {
+  text-decoration: none; /* Remove underlines from the logo link */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  font-family: "Montserrat";
+  color: white;
+}
+header .logo:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9); /* Уменьшим элемент на 5% при наведении */
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; /* Добавим анимацию перехода */
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+header nav ul li {
+  margin-right: 20px; /* Add spacing between menu items */
+}
+header nav ul li a {
+  text-decoration: none; /* Remove underlines from menu links */
+  color: white; /* Menu text color */
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+header nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav a:hover {
+  color: #bdbdbd;
+}
+header .header-contact-number {
+  font-weight: 600;
+}
+header .burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+header .burger span {
+  height: 2px;
+  width: 80%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  background-color: #faf6f2;
+}
+header .burger::before,
+header .burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #faf6f2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+header .burger::before {
+  top: 0;
+}
+header .burger::after {
+  bottom: 0;
+}
+header .burger.active span {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+header .burger.active::before {
+  top: 50%;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+      -ms-transform: rotate(-45deg) translate(0, -50%);
+          transform: rotate(-45deg) translate(0, -50%);
+}
+header .burger.active::after {
+  bottom: 50%;
+  -webkit-transform: rotate(45deg) translate(0, 50%);
+      -ms-transform: rotate(45deg) translate(0, 50%);
+          transform: rotate(45deg) translate(0, 50%);
+}
+@media (max-width: 1200px) {
+  header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 50px 40px;
+    background-color: rgba(0, 0, 0, 0.945);
+    -webkit-animation: burgerAnimation 0.4s;
+            animation: burgerAnimation 0.4s;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2em;
+    margin: 0 auto;
+  }
+  header nav ul li {
+    margin-bottom: 2em;
+  }
+}
+@-webkit-keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  background-color: #000000;
+}
+main .hero {
+  padding-top: 3em;
+  height: 800px;
+  width: 100%;
+  background-image: url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .hero .hero_container h1 {
+  margin: 1.5em 0 0.5em 0;
+  font-weight: 700;
+  font-size: 98px;
+}
+main .hero .hero_container h2 {
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+main .hero .hero_container ul {
+  position: relative;
+  margin-bottom: 6em;
+}
+main .hero .hero_container ul li {
+  font-weight: 400;
+}
+main .hero .hero_container ul::after {
+  content: ""; /* Required for the pseudo-element to be generated */
+  display: block; /* Make the pseudo-element a block-level element */
+  width: 500px; /* Set the width to 100% to create a horizontal line */
+  height: 1px; /* Set the height to define the thickness of the line */
+  background-color: #ffffff; /* Set the line color, replace with your desired color */
+  position: absolute; /* Position the line absolutely */
+  bottom: 0; /* Position it at the bottom of the parent element */
+  top: 6em;
+  left: 0; /* Position it at the left edge of the parent element */
+}
+main .hero .hero_container a {
+  padding: 20px 80px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: rgb(173, 41, 52);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; /* Добавляем анимацию для плавного перехода */
+}
+main .hero .hero_container a:hover {
+  padding: 18px 78px; /* Уменьшаем padding при наведении */
+  font-size: 20px; /* Уменьшаем font-size при наведении */
+  /* Можно также изменить другие свойства, чтобы создать желаемый эффект */
+}
+main .customer-form .customer-form_container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 1px 65px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+main .customer-form .customer-form_container form h2 {
+  font-size: 40px;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.2em 0 2em 0;
+}
+main .customer-form .customer-form_container label {
+  color: black;
+}
+main .customer-form .customer-form_container select {
+  cursor: pointer;
+}
+main .customer-form .customer-form_container .service-form-top {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .customer-form .customer-form_container .service-form-top li {
+  width: 350px;
+}
+main .customer-form .customer-form_container .service-form-top li select {
+  height: 60px;
+  border-radius: 10px;
+  background: #ebebeb;
+  border: 1px solid #ccc;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  width: 100%;
+}
+main .customer-form .customer-form_container .service-form-top li option {
+  background: #ebebeb;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  height: 60px;
+  border-radius: 10px;
+}
+main .customer-form .customer-form_container .service-form-bottom {
+  margin-top: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .customer-form .customer-form_container .service-form-bottom label {
+  font-weight: 400;
+}
+main .customer-form .customer-form_container .service-form-bottom li {
+  width: 350px;
+  height: 60px;
+  display: block;
+  margin-bottom: 20px;
+}
+main .customer-form .customer-form_container .service-form-bottom li select {
+  display: block;
+}
+main .customer-form .customer-form_container .service-form-bottom li option {
+  display: block;
+}
+main .customer-form .customer-form_container .service-form-bottom li select,
+main .customer-form .customer-form_container .service-form-bottom li input[type=text],
+main .customer-form .customer-form_container .service-form-bottom li input[type=date],
+main .customer-form .customer-form_container .service-form-bottom li input[type=tel] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 20px;
+  background: #ebebeb;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+main .customer-form .customer-form_container .submit-form-btn {
+  display: block;
+  margin: 0 auto; /* This will center the button horizontally */
+  padding: 20px 80px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: #e81c2e;
+  cursor: pointer;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+main .services {
+  margin-bottom: 130px;
+}
+main .services .services_container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 400px;
+}
+main .services .services_container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .services .services_container ul .services-img1 {
+  background-image: url(/images/services-1.jpg);
+  border: 3px solid rgba(73, 73, 73, 0.372);
+  background-position: top;
+  background-size: cover;
+  border-radius: 0.5em;
+}
+main .services .services_container ul .services-img2 {
+  background-image: url(/images/services-2.jpg);
+  background-position: top;
+  border: 3px solid rgba(73, 73, 73, 0.372);
+  background-size: cover;
+  border-radius: 0.5em;
+}
+main .services .services_container ul .services-img3 {
+  background-image: url(/images/services-3.jpg);
+  border: 3px solid rgba(73, 73, 73, 0.372);
+  background-size: cover;
+  border-radius: 0.5em;
+}
+main .about-us {
+  margin-bottom: 120px;
+}
+main .about-us .about-us_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 70px 50px 30px 50px;
+  border-radius: 12px;
+  background: rgba(232, 28, 46, 0.5);
+  line-height: 35.38px;
+  font-variant: small-caps;
+}
+main .about-us .about-us_container .about-us-left {
+  width: 65%;
+}
+main .about-us .about-us_container .about-us-left h3 {
+  max-width: 1090px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+main .about-us .about-us_container .about-us-left .about-us-txt {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+main .about-us .about-us_container .about-us-left ul {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+main .about-us .about-us_container .about-us-left ul li {
+  font-weight: 400;
+}
+main .about-us .about-us_container .about-us-left .about-us-slogan {
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+main .about-us .about-us_container .about-us-left a {
+  color: #e81c2e;
+  padding: 20px 70px;
+  text-align: center;
+  border-radius: 6px;
+  background: #fff;
+}
+main .about-us .about-us_container .about-us-right {
+  width: 30%;
+  position: relative;
+}
+main .about-us .about-us_container .about-us-right img {
+  position: absolute; /* Устанавливаем position: absolute; */
+  /* Закрепляем к нижнему краю */
+  right: -90px; /* Закрепляем к правой стороне */
+  margin-top: 30px;
+  max-width: 580px;
+  height: 100%;
+}
+main .contacts {
+  padding-bottom: 200px;
+}
+main .contacts .contacts_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .contacts .contacts_container .contacts-left-part {
+  width: 50%;
+}
+main .contacts .contacts_container .contacts-left-part h3 {
+  font-weight: 600;
+  margin: 40px 0 40px 0;
+}
+main .contacts .contacts_container .contacts-left-part a {
+  font-weight: 400;
+}
+main .contacts .contacts_container .contacts-left-part a span {
+  font-weight: 400;
+  color: #b6b6b6;
+}
+main .contacts .contacts_container .contacts-left-part .location-link {
+  width: 30%;
+}
+main .contacts .contacts_container .contacts-left-part a:hover {
+  color: #9c7575;
+}
+main .contacts .contacts_container .contacts-left-part a:hover span {
+  color: #9c7575;
+}
+main .contacts .contacts_container .contacts-right-part {
+  max-height: 500px;
+}
+main .contacts .contacts_container .contacts-right-part .map-location iframe {
+  border-radius: 10px;
+}
+
+footer {
+  background: rgb(30, 30, 30);
+  padding: 3em 0;
+}
+footer .footer_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; /* Расположим элементы внутри контейнера вертикально */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Выравниваем элементы по центру по горизонтали */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* Размещаем элементы с равным пространством между ними */
+}
+footer .footer_container .footer-links-div {
+  gap: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer_container .footer-links-div .footer-logo {
+  display: block; /* Убедитесь, что элемент блочный */
+  text-align: center; /* Выравнивание текста по центру по горизонтали */
+  margin: 0 auto; /* Установим margin для центрирования по горизонтали */
+  margin-bottom: 2em;
+  width: 100px;
+}
+footer .footer_container .footer-links-div .footer-logo:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9); /* Уменьшим элемент на 5% при наведении */
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; /* Добавим анимацию перехода */
+}
+footer .footer_container .footer-links-div .footer-links {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+footer .footer_container .footer-links-div .footer-links li a {
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .footer_container .footer-links-div .footer-links li a:hover {
+  color: #989898;
+}
+footer .footer_container .footer-links-div .footer-social-links {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  gap: 1em;
+}
+footer .footer_container .footer-links-div .footer-social-links li a img {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  width: 50px;
+  height: 50px;
+}
+footer .footer_container .footer-links-div .footer-social-links li a:hover img {
+  background-color: rgb(121, 23, 23);
+  color: white;
+}
+footer .footer_container .rights-reserved-span {
+  font-weight: 400;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3em;
+}

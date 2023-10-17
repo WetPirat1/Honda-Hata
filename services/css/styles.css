@@ -1,0 +1,465 @@
+@charset "UTF-8";
+[class*=_container] {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+.active-link {
+  color: #bdbdbd;
+}
+
+* {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-headline {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 90px;
+}
+
+.open {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8); /* Задаем полупрозрачный цвет фона (измените значение alpha для управления прозрачностью) */
+  color: white; /* Цвет текста */
+  width: 100%;
+  position: fixed;
+  padding: 15px 0; /* Добавьте необходимое заполнение */
+  z-index: 99;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* Применяем размытие к элементам под header */
+  /* Style the logo */
+  /* Style the navigation menu */
+  /* Center the menu items vertically */
+  /* Add hover effect for menu items (optional) */
+  /* Добавляем класс active для анимации иконки бургера */
+  /* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+}
+header .open {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+header .header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* Logo on the left and nav on the right */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Vertically center the items */
+  /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the header on the page */
+  padding: 0 20px; /* Add horizontal padding as needed */
+}
+header .logo {
+  text-decoration: none; /* Remove underlines from the logo link */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust font-weight as needed */
+  font-family: "Montserrat";
+  color: white;
+}
+header .logo:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9); /* Уменьшим элемент на 5% при наведении */
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; /* Добавим анимацию перехода */
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+header nav ul li {
+  margin-right: 20px; /* Add spacing between menu items */
+}
+header nav ul li a {
+  text-decoration: none; /* Remove underlines from menu links */
+  color: white; /* Menu text color */
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+header nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav a:hover {
+  color: #bdbdbd;
+}
+header .header-contact-number {
+  font-weight: 600;
+}
+header .burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+header .burger span {
+  height: 2px;
+  width: 80%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  background-color: #faf6f2;
+}
+header .burger::before,
+header .burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #faf6f2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+header .burger::before {
+  top: 0;
+}
+header .burger::after {
+  bottom: 0;
+}
+header .burger.active span {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+header .burger.active::before {
+  top: 50%;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+      -ms-transform: rotate(-45deg) translate(0, -50%);
+          transform: rotate(-45deg) translate(0, -50%);
+}
+header .burger.active::after {
+  bottom: 50%;
+  -webkit-transform: rotate(45deg) translate(0, 50%);
+      -ms-transform: rotate(45deg) translate(0, 50%);
+          transform: rotate(45deg) translate(0, 50%);
+}
+@media (max-width: 1200px) {
+  header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 50px 40px;
+    background-color: rgba(0, 0, 0, 0.945);
+    -webkit-animation: burgerAnimation 0.4s;
+            animation: burgerAnimation 0.4s;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2em;
+    margin: 0 auto;
+  }
+  header nav ul li {
+    margin-bottom: 2em;
+  }
+}
+@-webkit-keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.price-list {
+  position: relative;
+  height: 1250px;
+  background: -webkit-gradient(linear, left bottom, left top, from(hsl(0, 0%, 0%)), to(rgb(27, 0, 4)));
+  background: linear-gradient(0deg, hsl(0, 0%, 0%) 0%, rgb(27, 0, 4) 100%);
+}
+.price-list .price-list_container {
+  position: relative;
+  max-width: 1200px;
+  padding-top: 6.5em;
+  margin: 0 auto;
+}
+.price-list .price-list_container .slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.price-list .price-list_container .slider .active {
+  display: block;
+}
+.price-list .price-list_container .slider .slider-arrow-next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.price-list .price-list_container .slider .slider-arrow-next .next-slide {
+  background-color: rgba(40, 40, 40, 0.8235294118);
+  color: #ffffff;
+  font-size: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 1px 10px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.price-list .price-list_container .slider .slider-arrow-next .next-slide:hover {
+  background-color: rgba(255, 255, 255, 0.6039215686);
+  color: #282828;
+}
+.price-list .price-list_container .slider .slider-arrow-prev {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.price-list .price-list_container .slider .slider-arrow-prev .prev-slide {
+  background-color: rgba(40, 40, 40, 0.8235294118);
+  -webkit-box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.4);
+          box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-size: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 1px 10px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.price-list .price-list_container .slider .slider-arrow-prev .prev-slide:hover {
+  background-color: rgba(255, 255, 255, 0.6039215686);
+  color: #282828;
+}
+.price-list .price-list_container .price-list-table {
+  display: none;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgb(19, 19, 19) 20%, hsl(350, 100%, 19%) 100%);
+}
+.price-list .price-list_container .price-list-table h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 1em;
+}
+.price-list .price-list_container .price-list-table .price-div {
+  width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+.price-list .price-list_container .price-list-table .price-div .left-part {
+  position: absolute;
+}
+.price-list .price-list_container .price-list-table .price-div .left-part ul li {
+  font-weight: 400;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.price-list .price-list_container .price-list-table .price-div .left-part ul li p {
+  width: 600px;
+  font-weight: 400;
+  font-size: 22px;
+}
+.price-list .price-list_container .price-list-table .price-div .left-part ul li span {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: auto;
+}
+.price-list .price-list_container .centered-button {
+  text-align: center;
+  margin-top: 70px; /* Отступ от верха кнопки до прайс-листа */
+}
+.price-list .price-list_container .hero-btn {
+  padding: 20px 80px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: rgba(232, 28, 45, 0.629);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-box-shadow: 0 0 20px 5px rgba(96, 52, 219, 0.7);
+          box-shadow: 0 0 20px 5px rgba(96, 52, 219, 0.7);
+}
+.price-list .price-list_container .hero-btn:hover {
+  -webkit-box-shadow: 0 0 10px 2px rgba(96, 52, 219, 0.7);
+          box-shadow: 0 0 10px 2px rgba(96, 52, 219, 0.7);
+}
+
+footer {
+  background: rgb(30, 30, 30);
+  padding: 3em 0;
+}
+footer .footer_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; /* Расположим элементы внутри контейнера вертикально */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Выравниваем элементы по центру по горизонтали */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* Размещаем элементы с равным пространством между ними */
+}
+footer .footer_container .footer-links-div {
+  gap: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer_container .footer-links-div .footer-logo {
+  display: block; /* Убедитесь, что элемент блочный */
+  text-align: center; /* Выравнивание текста по центру по горизонтали */
+  margin: 0 auto; /* Установим margin для центрирования по горизонтали */
+  margin-bottom: 2em;
+  width: 100px;
+}
+footer .footer_container .footer-links-div .footer-logo:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9); /* Уменьшим элемент на 5% при наведении */
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; /* Добавим анимацию перехода */
+}
+footer .footer_container .footer-links-div .footer-links {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+footer .footer_container .footer-links-div .footer-links li a {
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .footer_container .footer-links-div .footer-links li a:hover {
+  color: #989898;
+}
+footer .footer_container .footer-links-div .footer-social-links {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  gap: 1em;
+}
+footer .footer_container .footer-links-div .footer-social-links li a img {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  width: 50px;
+  height: 50px;
+}
+footer .footer_container .footer-links-div .footer-social-links li a:hover img {
+  background-color: rgb(121, 23, 23);
+  color: white;
+}
+footer .footer_container .rights-reserved-span {
+  font-weight: 400;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3em;
+}

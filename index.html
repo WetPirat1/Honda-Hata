@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автосервiс</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/adaptation.css" />
+
+    <!-- animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- api -->
+    <script src="https://apis.google.com/js/api.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_container">
+        <a href="#" class="logo wow animate__animated animate__fadeInDown">
+          <img
+            style="width: 65px; height: 50px"
+            src="images/logos/logo_white.png"
+            alt=""
+          />
+        </a>
+
+        <nav>
+          <ul class="wow animate__animated animate__fadeInDown">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#form-frame-id">Запис</a></li>
+            <li><a href="services/services.html">Послуги</a></li>
+            <li><a href="#about-us-frame">Про нас</a></li>
+            <li><a href="#contacts-frame-id">Контакти</a></li>
+            <li>
+              <a class="header-contact-number" href="">+38(067)560-9810</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero_container">
+          <h1 class="wow animate__animated animate__fadeInUp">Honda Xata</h1>
+
+          <h2 class="wow animate__animated animate__fadeInUp">
+            Першокласне обслуговування автомобілів
+          </h2>
+
+          <ul class="wow animate__animated animate__fadeInUp">
+            <li>• технічне обслуговування</li>
+            <li>• заміна мастила</li>
+            <li>• заміна коробки передачі</li>
+          </ul>
+
+          <span></span>
+
+          <a
+            class="hero-btn wow animate__animated animate__fadeInUp"
+            href="#form-frame-id"
+            >ЗАПИСАТИСЯ</a
+          >
+        </div>
+      </div>
+
+      <div class="customer-form" id="form-frame-id">
+        <div
+          class="customer-form_container wow animate__animated animate__fadeInUp"
+        >
+          <form class="form-booking" action="javascript:void(0);" method="post">
+            <h2>Зламався автомобіль?</h2>
+
+            <ul class="service-form-top">
+              <li>
+                <label for="choice1"></label>
+                <select id="choice1" name="choice1" required>
+                  <option value="a">Оберіть послугу</option>
+                  <option value="Компʼютерна діагностика">
+                    Компʼютерна діагностика
+                  </option>
+                  <option value="Адаптації електронних блоків/систем">
+                    Адаптації електронних блоків/систем
+                  </option>
+                  <option value="Регулювання зазорів ГРМ">
+                    Регулювання зазорів ГРМ
+                  </option>
+                  <option value="Заправка кондиціонера">
+                    Заправка кондиціонера
+                  </option>
+                  <option value="Діагностика підвіски ">
+                    Діагностика підвіски
+                  </option>
+                  <option value="Заміна гальмівної рідини">
+                    Заміна гальмівної рідини
+                  </option>
+                  <option value="Заміна гальмівних колодок">
+                    Заміна гальмівних колодок
+                  </option>
+                  <option value="Ремонт гальмівного супорта">
+                    Ремонт гальмівного супорта
+                  </option>
+                  <option value="Заміна мастила і фільтрів">
+                    Заміна мастила і фільтрів
+                  </option>
+                  <option
+                    value="Заміна мастила в АКПП з заміною внутрішнього фільтра"
+                  >
+                    Заміна мастила в АКПП з заміною внутрішнього фільтра
+                  </option>
+                  <option value="Зняття-встановлення амортизатора підвіски">
+                    Зняття-встановлення амортизатора підвіски
+                  </option>
+                  <option value="Заміна опори, пружини, стійки">
+                    Заміна опори, пружини, стійки
+                  </option>
+                  <option value="Зняття-встановлення піввісі">
+                    Зняття-встановлення піввісі
+                  </option>
+                  <option value="Заміна ШРУСа (пильника)">
+                    Заміна ШРУСа (пильника)
+                  </option>
+                  <option value="Зняття-вставлення важеля підвіски">
+                    Зняття-вставлення важеля підвіски
+                  </option>
+                  <option value="Заміна сайлентблока">
+                    Заміна сайлентблока
+                  </option>
+                  <option value="Заміна рульової тяги (пильовика)">
+                    Заміна рульової тяги (пильовика)
+                  </option>
+                  <option value="Заміна рульового наконечника">
+                    Заміна рульового наконечника
+                  </option>
+                  <option value="Заміна кульової опори">
+                    Заміна кульової опори
+                  </option>
+                  <option value="Заміна тяжки стабілізатора">
+                    Заміна тяжки стабілізатора
+                  </option>
+                  <option value="Заміна маточини (підшипника)">
+                    Заміна маточини (підшипника)
+                  </option>
+                  <option value="Шприцювання кардана">
+                    Шприцювання кардана
+                  </option>
+                  <option value="Зняття встановлення КПП">
+                    Зняття встановлення КПП
+                  </option>
+                  <option value="Зняття встановлення двигуна">
+                    Зняття встановлення двигуна
+                  </option>
+                  <option value="Заміна приводу ГРМ">Заміна приводу ГРМ</option>
+                  <option value="Чистка паливних форсунок">
+                    Чистка паливних форсунок
+                  </option>
+                  <option value="Заміна свічок запалювання">
+                    Заміна свічок запалювання
+                  </option>
+                </select>
+              </li>
+
+              <li>
+                <label for="choice2"></label>
+                <select id="choice2" name="choice2" required>
+                  <option value="a">Марка машини</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Suzuki">Suzuki</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Lada">Lada</option>
+                  <option value="Daewoo">Daewoo</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="choice3"></label>
+                <select id="choice3" name="choice3" required>
+                  <option value="a">Рік випуску</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                </select>
+              </li>
+            </ul>
+
+            <ul class="service-form-bottom">
+              <li>
+                <label for="date">Дата візиту</label>
+                <input type="date" id="date" name="date" required />
+              </li>
+
+              <li class="bottom-name-input">
+                <label for="name">Клієнт</label>
+                <input
+                  placeholder="Ваше ім’я"
+                  type="text"
+                  id="name"
+                  name="name"
+                  pattern="[A-Za-zА-Яа-яҐґЄєІіЇї]+"
+                  title="Тiльки лiтери"
+                  required
+                  autocomplete="off"
+                />
+              </li>
+
+              <li>
+                <label for="phone" style="color: white">.</label>
+                <input
+                  placeholder="Номер телефону"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]+"
+                  title="Тiльки цифри"
+                  required
+                  autocomplete="off"
+                  maxlength="13"
+                />>
+              </li>
+            </ul>
+            <input
+              class="submit-form-btn wow animate__animated animate__fadeIn"
+              type="submit"
+              value="ЗАПИСАТИСЯ"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="services">
+        <div class="services_container">
+          <h2 class="section-headline wow animate__animated animate__fadeInUp">
+            Послуги
+          </h2>
+          <ul>
+            <li class="services-img1 wow animate__animated animate__fadeInUp">
+              <span>Заміна мастила</span>
+            </li>
+            <li class="services-img2 wow animate__animated animate__fadeInUp">
+              <span>Технічне обслуговування</span>
+            </li>
+            <li class="services-img3 wow animate__animated animate__fadeInUp">
+              <span>Заміна коробки передачі</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-us" id="about-us-frame">
+        <h2 class="section-headline wow animate__animated animate__fadeInUp">
+          Про нас
+        </h2>
+        <div class="about-us_container wow animate__animated animate__fadeInUp">
+          <div class="about-us-left wow animate__animated animate__fadeInUp">
+            <h3>
+              <span class="brand-name-span">"Хонда Хата"</span> - це
+              спеціалізований автосервіс, який надає широкий спектр послуг з
+              ремонту та обслуговування автомобілів марки Honda. Ми працюємо на
+              ринку вже понад 10 років і за цей час зарекомендували себе як
+              надійний і кваліфікований партнер.
+            </h3>
+
+            <p class="about-us-txt">
+              Наші майстри мають великий досвід роботи з автомобілями Honda і
+              використовують у своїй роботі тільки якісні запчастини та
+              обладнання. Ми гарантуємо високий рівень якості робіт і сервісу, а
+              також доступні ціни.
+            </p>
+
+            <ul>
+              Ми працюємо з усіма моделями автомобілів Honda, від найстаріших до
+              найсучасніших.<br />
+              <br />
+              Наші клієнти цінують нас за:
+              <li>• Високий рівень якості робіт</li>
+              <li>• Доступні ціни</li>
+              <li>• Гарантію на виконані роботи</li>
+              <li>• Привітний персонал</li>
+            </ul>
+
+            <p class="about-us-slogan">
+              Завітайте до нас і переконайтеся в тому, <br />що ми - найкращий
+              автосервіс для вашого авто!
+            </p>
+
+            <a href="#form-frame-id">ЗАПИСАТИСЯ</a>
+          </div>
+
+          <div class="about-us-right">
+            <img src="images/about-us.png" alt="worker" />
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts" id="contacts-frame-id">
+        <h2 class="section-headline wow animate__animated animate__fadeInUp">
+          Контакти
+        </h2>
+        <div class="contacts_container wow animate__animated animate__fadeInUp">
+          <div class="contacts-left-part">
+            <h3 wow animate__animated animate__fadeInUp>Адреса:</h3>
+
+            <a
+              class="location-link wow animate__animated animate__fadeInUp"
+              target="_blank"
+              href="https://maps.app.goo.gl/zc2pEJNzaeA4oqvLA"
+            >
+              вул. Передова, 317а, Дніпро, Дніпропетровська область, 49000<br />
+              <span>(В’їзд зі сторони Полтавського шосе)</span>
+            </a>
+
+            <h3 class="wow animate__animated animate__fadeInUp">
+              Номер телефону:
+            </h3>
+
+            <a
+              class="wow animate__animated animate__fadeInUp"
+              href="tel:+38(067)560-9810"
+              >+38(067)560-9810</a
+            ><br />
+            <a
+              class="wow animate__animated animate__fadeInUp"
+              href="tel:+38(073)560-9810"
+              >+38(073)560-9810</a
+            >
+
+            <h3 class="wow animate__animated animate__fadeInUp">Пошта:</h3>
+
+            <a
+              class="wow animate__animated animate__fadeInUp"
+              href="mailto:example@gmail.com"
+              >example@gmail.com</a
+            >
+          </div>
+
+          <div class="contacts-right-part">
+            <div class="map-location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d743.4577733281661!2d34.98354399165237!3d48.522794431209434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe04a68dcca89%3A0xf94afd1f32035098!2sKhonda%20Khata!5e0!3m2!1sen!2sde!4v1695492526246!5m2!1sen!2sde"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer-id">
+      <div class="footer_container">
+        <div class="footer-links-div">
+          <a class="footer-logo" href="#">
+            <img
+              style="width: 80px; height: 60px"
+              src="images/logos/logo_white.png"
+              alt=""
+          /></a>
+
+          <ul class="footer-links">
+            <li><a href="#">Головна</a></li>
+            <li><a href="/services/services.html">Послуги</a></li>
+            <li><a href="#form-frame-id">Запис</a></li>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#contacts-frame-id">Контакти</a></li>
+          </ul>
+
+          <ul class="footer-social-links">
+            <li>
+              <a href="https://x.com" target="_blank"
+                ><img src="images/logos/x_logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank"
+                ><img src="images/logos/youtube_logo.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank"
+                ><img src="images/logos/facebook_logo.webp" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <span class="rights-reserved-span">© Всі права захищені</span>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let burger = document.querySelector(".burger");
+        let nav = document.querySelector("nav ul");
+
+        burger.addEventListener("click", function () {
+          burger.classList.toggle("active");
+          nav.classList.toggle("open");
+        });
+
+        // Находим элемент "Контакты" в навигации
+        let contactsLink = document.querySelector(
+          'nav ul li a[href="#contacts-frame-id"]'
+        );
+
+        let aboutUsLink = document.querySelector(
+          'nav ul li a[href="#about-us-frame"]'
+        );
+        let formLink = document.querySelector(
+          'nav ul li a[href="#form-frame-id"]'
+        );
+
+        // Добавляем обработчик события клика на "Контакты"
+        contactsLink.addEventListener("click", function () {
+          // Убираем класс 'active' у бургера
+          burger.classList.remove("active");
+          // Закрываем навигацию
+          nav.classList.remove("open");
+        });
+        aboutUsLink.addEventListener("click", function () {
+          // Убираем класс 'active' у бургера
+          burger.classList.remove("active");
+          // Закрываем навигацию
+          nav.classList.remove("open");
+        });
+        formLink.addEventListener("click", function () {
+          // Убираем класс 'active' у бургера
+          burger.classList.remove("active");
+          // Закрываем навигацию
+          nav.classList.remove("open");
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        config = {
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          altInput: true,
+          altFormat: "F j, Y (h:S K)",
+        };
+
+        flatpickr("input[type=datetime-local]", config);
+      });
+    </script>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

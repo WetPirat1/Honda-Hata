@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@media (max-width: 1200px) {
+  header {
+    padding: 10px 0;
+  }
+  main .hero {
+    height: 800px;
+  }
+  main .hero .hero_container {
+    padding-top: 40px;
+    text-align: center;
+  }
+  main .hero .hero_container h1 {
+    font-size: 70px;
+    margin-top: 0.5em;
+  }
+  main .hero .hero_container h2 {
+    font-size: 30px;
+  }
+  main .hero .hero_container ul {
+    gap: 3em;
+    background-color: rgba(0, 0, 0, 0.5843137255);
+    border-radius: 15px;
+    padding: 10px 0;
+  }
+  main .hero .hero_container ul::after {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    content: ""; /* Required for the pseudo-element to be generated */
+    display: block; /* Make the pseudo-element a block-level element */
+    width: 100%; /* Set the width to 100% to create a horizontal line */
+    height: 1px; /* Set the height to define the thickness of the line */
+    background-color: #ffffff; /* Set the line color, replace with your desired color */
+    position: absolute; /* Position the line absolutely */
+    bottom: 0; /* Position it at the bottom of the parent element */
+    top: 6em;
+    left: 0; /* Position it at the left edge of the parent element */
+  }
+  main .customer-form {
+    padding: 0 20px;
+  }
+  main .customer-form .customer-form_container {
+    margin-top: 70px;
+  }
+  main .customer-form .customer-form_container form h2 {
+    margin-top: 1.2em;
+    font-size: 31px;
+  }
+  main .customer-form .customer-form_container form .service-form-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .customer-form .customer-form_container form .service-form-top li {
+    margin-bottom: 2em;
+  }
+  main .customer-form .customer-form_container form .service-form-top li select option {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .customer-form .customer-form_container form .service-form-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .customer-form .customer-form_container form .service-form-bottom li {
+    margin-bottom: 3em;
+  }
+  main .customer-form .customer-form_container form .service-form-bottom li input {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .customer-form .customer-form_container form .service-form-bottom li label {
+    margin-bottom: 0.4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Центрирование по горизонтали */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центрирование по вертикали */
+  }
+  main .customer-form .customer-form_container form .service-form-bottom .bottom-name-input {
+    margin-bottom: 2em;
+  }
+  main .services .services_container {
+    margin-bottom: 20em;
+  }
+  main .services .services_container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .services .services_container ul {
+    display: block;
+  }
+  main .services .services_container ul li {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    margin-bottom: 1.5em;
+  }
+  main .services .services_container ul li span {
+    z-index: 4;
+  }
+  main .services .services_container ul li::before {
+    content: ""; /* Обязательное свойство для псевдоэлементов */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.257); /* Здесь можно настроить цвет и прозрачность затемнения */
+  }
+  main .about-us {
+    padding: 0 20px;
+    padding-top: 3em;
+  }
+  main .about-us .section-headline {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .about-us .about-us_container {
+    display: block;
+  }
+  main .about-us .about-us_container .about-us-left {
+    width: 100%;
+  }
+  main .about-us .about-us_container .about-us-left .brand-name-span {
+    font-size: 28px;
+  }
+  main .about-us .about-us_container .about-us-left h3,
+  main .about-us .about-us_container .about-us-left p,
+  main .about-us .about-us_container .about-us-left ul,
+  main .about-us .about-us_container .about-us-left li {
+    font-size: 23px;
+    text-align: center;
+  }
+  main .about-us .about-us_container .about-us-left a {
+    display: block;
+  }
+  main .about-us .about-us-right {
+    display: none;
+  }
+  main .contacts .section-headline {
+    font-size: 40px;
+  }
+  main .contacts .contacts_container {
+    display: block;
+  }
+  main .contacts .contacts_container .contacts-left-part {
+    width: 100%;
+    text-align: center;
+  }
+  main .contacts .contacts_container .contacts-right-part .map-location {
+    margin-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Горизонтальное выравнивание по центру */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .contacts .contacts_container .contacts-right-part .map-location iframe {
+    width: 450px;
+    height: 300px;
+  }
+}
+@media (max-width: 750px) {
+  footer .footer_container .footer-links-div .footer-links {
+    display: block;
+  }
+  footer .footer_container .footer-links-div .footer-links li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-bottom: 0.8em;
+  }
+  footer .footer_container .rights-reserved-span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  main .hero .hero_container h1 {
+    font-size: 50px;
+  }
+  main .customer-form .customer-form_container .submit-form-btn {
+    padding: 20px 40px;
+  }
+  main .about-us {
+    padding: 0;
+  }
+  main .about-us .about-us_container .about-us-left h3,
+  main .about-us .about-us_container .about-us-left p {
+    font-size: 20px;
+  }
+  main .about-us .about-us_container .about-us-left ul li {
+    font-size: 20px;
+  }
+  main .about-us .about-us_container .about-us-left .about-us-slogan {
+    font-size: 20px;
+  }
+}
