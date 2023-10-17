@@ -7,9 +7,7 @@
     font-size: 35px;
   }
   .price-list .price-list_container .price-list-table .price-div .left-part ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .price-list .price-list_container .price-list-table .price-div .left-part ul li p {
     font-size: 18px;
@@ -140,9 +138,7 @@
     display: block;
   }
   footer .footer_container .footer-links-div .footer-links li {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     text-align: center;
     margin-bottom: 0.8em;
   }
@@ -170,4 +166,4 @@
   main .about-us .about-us_container .about-us-left .about-us-slogan {
     font-size: 20px;
   }
-}
+}/*# sourceMappingURL=adaptation.css.map */
